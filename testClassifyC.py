@@ -5,7 +5,7 @@ import timeit
 
 
 def main():
-    img_path = "/home/agustin/Code/Matlab/ClasesDoc/AlgoritmosGeneticos/Pictures/c1/img_048.png"
+    img_path = "img_048.png"
     img = cv2.imread(img_path)
     img = cv2.resize(img, (50, 50))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -62,9 +62,7 @@ def camera():
     cv2.destroyAllWindows()
 
 
-def procesar_imagen_matlab(
-    file: str = "/home/agustin/Code/Matlab/ClasesDoc/AlgoritmosGeneticos/Pictures/c1/img_048.png",
-) -> float:
+def procesar_imagen_matlab(file: str = "img_048.png") -> float:
     img = cv2.imread(file)
     img = cv2.resize(img, (50, 50))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -84,9 +82,7 @@ def procesar_imagen_matlab(
 tensorflow_net = cv2.dnn.readNetFromTensorflow("/home/agustin/Code/Python/Model_LP2021/model_april_20_frozen.pb")
 
 
-def procesar_imagen_tensorflow(
-    file: str = "/home/agustin/Code/Matlab/ClasesDoc/AlgoritmosGeneticos/Pictures/c1/img_048.png",
-) -> float:
+def procesar_imagen_tensorflow(file: str = "img_048.png") -> float:
 
     # Input image
     img = cv2.imread(file)
@@ -102,11 +98,12 @@ def procesar_imagen_tensorflow(
 
 if __name__ == "__main__":
     number = 1_000
-    classes = ["banistas", "Negras", "Verdes", "Metas"]
+    # classes = ["banistas", "Negras", "Verdes", "Metas"]
     # camera()
     # main()
     print(procesar_imagen_matlab())
-    print(classes[procesar_imagen_tensorflow()])
-
-    print(timeit.timeit(procesar_imagen_matlab, number=number))
-    print(timeit.timeit(procesar_imagen_tensorflow, number=number))
+    # print(classes[procesar_imagen_tensorflow()])
+#
+# print(timeit.timeit(procesar_imagen_matlab, number=number))
+# print(timeit.timeit(procesar_imagen_tensorflow, number=number))
+#

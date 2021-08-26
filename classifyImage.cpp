@@ -137,7 +137,7 @@ double classifyImage(const unsigned char myImage[7500]) {
 
 // int main() {
 //     Mat image;
-//     image = imread("/home/agustin/Code/Matlab/ClasesDoc/AlgoritmosGeneticos/Pictures/c1/img_048.png");
+//     image = imread("img_048.png");
 //     if (!image.data) {
 //         printf("No image data \n");
 //         return -1;
