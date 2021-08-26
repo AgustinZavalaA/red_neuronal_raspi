@@ -10,7 +10,7 @@ def main():
     img = cv2.resize(img, (50, 50))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    so_file = "/home/agustin/Code/Python/CFunctionsInPython/classifyImage.so"
+    so_file = "classifyImage.so"
     processing = CDLL(so_file)
     processing.classifyImage.restype = c_double
     seq = c_uint8 * 7500
@@ -22,7 +22,7 @@ def main():
 
 
 def camera():
-    so_file = "/home/agustin/Code/Python/CFunctionsInPython/classifyImage.so"
+    so_file = "classifyImage.so"
     processing = CDLL(so_file)
     processing.classifyImage.restype = c_double
     seq = c_uint8 * 7500
@@ -67,7 +67,7 @@ def procesar_imagen_matlab(file: str = "img_048.png") -> float:
     img = cv2.resize(img, (50, 50))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    so_file = "/home/agustin/Code/Python/CFunctionsInPython/classifyImage.so"
+    so_file = "classifyImage.so"
     processing = CDLL(so_file)
     processing.classifyImage.restype = c_double
     seq = c_uint8 * 7500
