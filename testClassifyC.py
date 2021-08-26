@@ -79,7 +79,7 @@ def procesar_imagen_matlab(file: str = "img_048.png") -> float:
 
 
 # Load a model imported from Tensorflow
-tensorflow_net = cv2.dnn.readNetFromTensorflow("/home/agustin/Code/Python/Model_LP2021/model_april_20_frozen.pb")
+# tensorflow_net = cv2.dnn.readNetFromTensorflow("/home/agustin/Code/Python/Model_LP2021/model_april_20_frozen.pb")
 
 
 def procesar_imagen_tensorflow(file: str = "img_048.png") -> float:
